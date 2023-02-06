@@ -1,0 +1,98 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+apply from: '../dependencies.gradle'
+
+android {
+    namespace 'com.smendon.sneakersapp'
+    compileSdk versions.compileSdk
+
+    defaultConfig {
+        applicationId "com.smendon.sneakersapp"
+        minSdk versions.minSdk
+        targetSdk versions.compileSdk
+        versionCode versions.versionCode
+        versionName versions.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion versions.composeCompiler
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+
+    //Core and Architecture components
+    implementation "androidx.core:core-ktx:$versions.androidxCoreVersion"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycleVersion"
+    implementation "androidx.activity:activity-compose:$versions.activityVersion"
+
+    //Material
+    implementation "com.google.android.material:material:$versions.materialVersion"
+
+    //Compose
+    implementation "androidx.compose.ui:ui:$versions.composeVersion"
+    implementation "androidx.compose.ui:ui-tooling-preview:$versions.composeVersion"
+    implementation "androidx.compose.material:material:$versions.composeMaterialVer"
+    implementation "androidx.compose.material:material-icons-extended:$versions.composeMaterialVer"
+    implementation "androidx.constraintlayout:constraintlayout-compose:$versions.constraintVersion"
+    //implementation "androidx.compose.foundation:foundation:$versions.composeVersion"
+    //implementation "androidx.compose.foundation:foundation-layout:$versions.composeVersion"
+    implementation "androidx.compose.animation:animation:$versions.composeVersion"
+    implementation "androidx.compose.runtime:runtime:$versions.composeVersion"
+    implementation "androidx.compose.runtime:runtime-livedata:$versions.composeVersion"
+    implementation "androidx.navigation:navigation-compose:$versions.composeNavVersion"
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutinesVersion"
+
+    //Hilt
+    implementation "com.google.dagger:hilt-android:$versions.hiltVersion"
+    implementation "androidx.hilt:hilt-navigation-compose:$versions.hiltComposeNavigation"
+    kapt "com.google.dagger:hilt-compiler:$versions.hiltVersion"
+
+    //Room
+    implementation "androidx.room:room-runtime:$versions.roomVersion"
+    kapt "androidx.room:room-compiler:$versions.roomVersion"
+    implementation "androidx.room:room-ktx:$versions.roomVersion"
+
+    //Coil
+    implementation("io.coil-kt:coil-compose:$versions.coilVersion")
+
+    //Tests
+    testImplementation "junit:junit:$versions.junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$versions.androidxTest"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$versions.androidxEspresso"
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$versions.composeVersion"
+    debugImplementation "androidx.compose.ui:ui-tooling:$versions.composeVersion"
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$versions.composeVersion"
+}

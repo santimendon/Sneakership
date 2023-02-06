@@ -1,0 +1,39 @@
+ext.versions = [
+        minSdk               : 21,
+        compileSdk           : 33,
+        versionCode          : 1,
+        versionName          : '1.0.1',
+
+        //Compose
+        composeCompiler      : '1.4.0',
+        composeVersion       : '1.3.3',
+        composeMaterialVer   : '1.3.1',
+        constraintVersion    : '1.0.1',
+        activityVersion      : '1.6.1',
+        composeNavVersion    : '2.5.3',
+
+        //Material
+        materialVersion      : '1.8.0',
+
+        //Coil
+        coilVersion          : '2.2.2',
+
+        //Architecture Components
+        androidxCoreVersion  : '1.9.0',
+        fragmentVersion      : '1.3.1',
+        lifecycleVersion     : '2.4.1',
+        roomVersion          : '2.5.0',
+        archCompomentVersion : '2.1.0',
+
+        //Dependency Injection
+        hiltVersion          : '2.44',
+        hiltComposeNavigation: '1.0.0',
+
+        //Coroutines
+        coroutinesVersion    : '1.6.4',
+
+        //Tests
+        junitVersion         : '4.13.2',
+        androidxTest         : '1.1.5',
+        androidxEspresso     : '3.5.1'
+]
