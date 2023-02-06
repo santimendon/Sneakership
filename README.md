@@ -3,6 +3,17 @@
 ## About
 Sneakership is built using Jetpack Compose to mock a simple ecommerce application
 
+## Screenshots
+
+<img src="https://github.com/santimendon/Sneakership/blob/master/screenshots/landing.png" width="250" height="500" hspace=10 vspace=10>
+
+<img src="https://github.com/santimendon/Sneakership/blob/master/screenshots/sneaker-details.png" width="250" height="500" hspace=10 vspace=10>
+
+<img src="https://github.com/santimendon/Sneakership/blob/master/screenshots/sneaker-details-2.png" width="250" height="500" hspace=10 vspace=10>
+
+<img src="https://github.com/santimendon/Sneakership/blob/master/screenshots/cart.png" width="250" height="500" hspace=10 vspace=10>
+
+
 ## Features
 * Displays a grid (column size of 2) of available sneakers. The items contains the image, price and name of the sneaker.
 * The sneaker details page contains the selected sneakers title, name, image, brand and price. 
