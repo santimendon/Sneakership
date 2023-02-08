@@ -9,4 +9,11 @@
     <string name="label_order_details">Order Details</string>
     <string name="label_total">Total: </string>
     <string name="label_checkout">Checkout</string>
+
+    <!--Branch Keys-->
+    <string name="branch_key">key_live_mjZ6XWjWdJeJKPETsEcSBjdeuCkScJZb</string>
+    <string name="branch_test_key">key_live_mjZ6XWjWdJeJKPETsEcSBjdeuCkScJZb</string>
+    <string name="branch_secret">secret_live_3KaT8D34r9NKkJo6tDaIhgmhmcXNiclw</string>
+
+
 </resources>

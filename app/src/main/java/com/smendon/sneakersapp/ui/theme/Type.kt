@@ -16,12 +16,24 @@ val DarkTypography = Typography(
         fontSize = 24.sp
     ),
     h2 = TextStyle(
-        fontFamily = FontFamily.Monospace,
+        fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Bold,
         color = Color.White,
-        fontSize = 16.sp
+        fontSize = 24.sp
     ),
     h3 = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Bold,
+        color = Color.White,
+        fontSize = 20.sp
+    ),
+    h4 = TextStyle(
+        fontFamily = FontFamily.Monospace,
+        fontWeight = FontWeight.Bold,
+        color = Salmon,
+        fontSize = 20.sp
+    ),
+    h5 = TextStyle(
         fontFamily = FontFamily.Monospace,
         fontWeight = FontWeight.Bold,
         color = Salmon,
@@ -36,7 +48,7 @@ val DarkTypography = Typography(
     body2 = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
-        color = Color.Gray,
+        color = Color.White,
         fontSize = 18.sp
     )
 )
@@ -50,12 +62,24 @@ val LightTypography = Typography(
         fontSize = 24.sp
     ),
     h2 = TextStyle(
-        fontFamily = FontFamily.Monospace,
+        fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Bold,
         color = Color.Black,
-        fontSize = 16.sp
+        fontSize = 24.sp
     ),
     h3 = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Bold,
+        color = Color.DarkGray,
+        fontSize = 20.sp
+    ),
+    h4 = TextStyle(
+        fontFamily = FontFamily.Monospace,
+        fontWeight = FontWeight.Bold,
+        color = Salmon,
+        fontSize = 20.sp
+    ),
+    h5 = TextStyle(
         fontFamily = FontFamily.Monospace,
         fontWeight = FontWeight.Bold,
         color = Salmon,

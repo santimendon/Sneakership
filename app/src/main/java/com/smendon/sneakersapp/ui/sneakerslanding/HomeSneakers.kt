@@ -76,7 +76,7 @@ private fun HomeSneaker(
                     }
                     .padding(8.dp),
                 text = sneaker.name,
-                style = MaterialTheme.typography.h2,
+                style = MaterialTheme.typography.h3,
                 textAlign = TextAlign.Center,
             )
 

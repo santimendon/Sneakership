@@ -2,6 +2,7 @@ package com.smendon.sneakersapp.di
 
 import android.app.Application
 import androidx.room.Room
+import com.smendon.sneakersapp.branch.BranchHelper
 import com.smendon.sneakersapp.data.datasource.local.AppDatabase
 import com.smendon.sneakersapp.data.datasource.remote.RemoteData
 import com.smendon.sneakersapp.data.repository.SneakersRepositoryImpl
@@ -24,8 +25,18 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideRepository(remoteData: RemoteData, database: AppDatabase): SneakersRepository {
-        return SneakersRepositoryImpl(remoteData, database.appDao)
+    fun provideBranchHelper(app: Application): BranchHelper {
+        return BranchHelper(app)
+    }
+
+    @Provides
+    @Singleton
+    fun provideRepository(
+        remoteData: RemoteData,
+        database: AppDatabase,
+        branchHelper: BranchHelper
+    ): SneakersRepository {
+        return SneakersRepositoryImpl(remoteData, database.appDao, branchHelper)
     }
 
     @Provides

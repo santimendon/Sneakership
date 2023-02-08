@@ -7,6 +7,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.smendon.sneakersapp.domain.model.CartItem
+import com.smendon.sneakersapp.domain.usecase.CartCheckoutUseCase
 import com.smendon.sneakersapp.domain.usecase.GetCartItemsUseCase
 import com.smendon.sneakersapp.domain.usecase.RemoveFromCartUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -17,7 +18,8 @@ import javax.inject.Inject
 @HiltViewModel
 class CartViewModel @Inject constructor(
     private val getCartItemsUseCase: GetCartItemsUseCase,
-    private val removeFromCartUseCase: RemoveFromCartUseCase
+    private val removeFromCartUseCase: RemoveFromCartUseCase,
+    private val cartCheckoutUseCase: CartCheckoutUseCase
 ) : ViewModel() {
 
     var cartItems by mutableStateOf(emptyList<CartItem>())
@@ -39,6 +41,9 @@ class CartViewModel @Inject constructor(
     }
 
     fun pay() {
+        viewModelScope.launch(Dispatchers.IO) {
+            cartCheckoutUseCase.invoke(cartItems, cartTotalPriceState.value)
+        }
     }
 
     fun removeFromCart(cartItem: CartItem) {

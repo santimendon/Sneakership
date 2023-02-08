@@ -34,7 +34,7 @@ fun SneakersMainScreen() {
                     ?: return@composable
 
             SneakerDetail(sneakerId = sneakerId, sneakerDetailViewModel = hiltViewModel()) {
-              navController.navigateUp()
+                navController.navigateUp()
             }
         }
     }

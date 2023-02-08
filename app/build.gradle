@@ -88,6 +88,9 @@ dependencies {
     //Coil
     implementation("io.coil-kt:coil-compose:$versions.coilVersion")
 
+    //Branch
+    implementation('io.branch.sdk.android:library:5.+')
+
     //Tests
     testImplementation "junit:junit:$versions.junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$versions.androidxTest"

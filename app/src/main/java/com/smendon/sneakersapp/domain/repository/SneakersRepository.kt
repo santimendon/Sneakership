@@ -18,4 +18,6 @@ interface SneakersRepository {
     suspend fun insertCartItem(cartItem: CartItem)
 
     suspend fun deleteCartItem(cartItem: CartItem)
+
+    fun cartCheckout(cartItems: List<CartItem>, totalCartValue: Double)
 }

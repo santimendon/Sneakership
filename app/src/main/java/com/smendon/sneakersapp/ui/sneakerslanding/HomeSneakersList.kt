@@ -118,7 +118,7 @@ private fun SneakersAppBar() {
                 .padding(8.dp)
                 .align(Alignment.CenterVertically),
             text = stringResource(R.string.app_name),
-            style = MaterialTheme.typography.h1,
+            style = MaterialTheme.typography.h2,
             color = Salmon
         )
     }

@@ -1,16 +1,16 @@
 package com.smendon.sneakersapp.ui.main
 
 import androidx.annotation.StringRes
-import androidx.compose.runtime.*
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.State
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.toMutableStateList
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.smendon.sneakersapp.domain.model.Sneaker
 import com.smendon.sneakersapp.domain.usecase.GetAllSneakersUseCase
 import com.smendon.sneakersapp.domain.usecase.GetCartCountUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
