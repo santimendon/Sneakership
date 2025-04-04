@@ -26,7 +26,7 @@ ext.versions = [
         archCompomentVersion : '2.1.0',
 
         //Dependency Injection
-        hiltVersion          : '2.44',
+        hiltVersion          : '2.53',
         hiltComposeNavigation: '1.0.0',
 
         //Coroutines
